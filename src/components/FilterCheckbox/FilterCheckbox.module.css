@@ -36,7 +36,8 @@
   content: '';
   width: .7rem;
   height: .7rem;
-  left: .1rem;
+  left: .13rem;
+  bottom: .24rem;
   border-radius: 1rem;
   background: #F5F5F5;
   transition: 200ms ease-in-out;

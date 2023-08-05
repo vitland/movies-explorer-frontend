@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './MovieCard.module.css';
 import { ReactComponent as Like }  from '../../images/likeBtn.svg';
+import { ReactComponent as Del }  from '../../images/delBtn.svg';
 
 const MovieCard = () => {
   return (

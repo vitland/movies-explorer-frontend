@@ -2,7 +2,13 @@ import React from 'react';
 import MovieCard from '../MoviesCard/MovieCard';
 import styles from './MoviesCardList.module.css';
 
-const MoviesCardList = () => {
+const MoreBtn = ({savedMovies}) => {
+  if(savedMovies){
+    return null;
+  }
+  return  <button className={styles.list__button}>Ещё</button>
+}
+const MoviesCardList = ({savedMovies}) => {
   return (
     <section className={styles.list}>
       <div className={styles.list__container}>
@@ -12,7 +18,7 @@ const MoviesCardList = () => {
         <MovieCard/>
         <MovieCard/>
       </div>
-      <button className={styles.list__button}>Ещё</button>
+      <MoreBtn savedMovies={savedMovies}/>
     </section>
   );
 };
