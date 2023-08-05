@@ -1,0 +1,77 @@
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 410px;
+}
+
+.profile__heading{
+  margin: 74px 0 123px;
+  padding: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__textContainer{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin: 0 0 34px;
+  width: 100%;
+}
+
+.profile__textContainer:first-of-type::after{
+  position: absolute;
+  margin-top: 30px;
+  top: 0;
+  left: 0;
+  content: '';
+  height: 1px;
+  background: #E8E8E8;
+  width: 100%;
+}
+.profile__textContainer:last-of-type{
+  margin-bottom: 220px;
+}
+
+.profile__tableTitle{
+  padding: 0;
+  margin: 0;
+  align-self: flex-start;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__tableValue{
+  padding: 0;
+  margin: 0;
+  align-self: flex-end;
+  color: #000;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  width: 410px;
+  height: 16px;
+  border: none;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__button_out{
+  color: #FF3055;
+  margin: 16px 0 70px;
+}

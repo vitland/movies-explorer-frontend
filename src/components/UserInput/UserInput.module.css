@@ -1,0 +1,33 @@
+.userInput{
+  padding: 5px 0 10px;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  max-width: 396px;
+  border: none;
+  border-bottom: 1px solid #E8E8E8;
+  outline: none;
+}
+.userInput:focus{
+  border-bottom: 1px solid #3456F3;
+
+}
+.userInput__label{
+  color: #A0A0A0;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.userInput__err{
+  padding: 0;
+  margin: 0 0 18px;
+  color: #FF3055;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
