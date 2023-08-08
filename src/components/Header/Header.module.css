@@ -3,27 +3,37 @@
   width: 100%;
   background-color: #073042;
 }
+
 .header_light{
   background-color: #F9F9F9;
 }
 
 .header__container{
   margin: 0 auto;
-  padding: 18px 0 0;
+  padding: 18px 0;
   max-width: 1140px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
  }
 
-.header__userContainer{
+.header__user{
   display: flex;
-  justify-content: space-between;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  color: #FFF;
+  text-decoration: none;
+  justify-content: space-evenly;
+  font-weight: 500;
+  align-items: center;
+  width: 109px;
+  height: 32px;
+  border-radius: 20px;
+  border: 2px solid #F5F5F5;
 }
 
-.header__logo{}
-
-.header__login{
-  
+.header__user_dark{
+  color: #000;
 }
-.header__register{}
