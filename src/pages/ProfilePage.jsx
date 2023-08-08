@@ -5,7 +5,7 @@ import Profile from '../components/Profile/Profile';
 const ProfilePage = () => {
   return (
     <>
-      <Header/>
+      <Header  light={true} isLoggedIn={true}/>
       <Profile/>
     </>
   );
