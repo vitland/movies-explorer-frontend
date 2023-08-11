@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import userIcon from '../../images/user_icon.svg';
-import userIcon_dark from '../../images/user_icon_dark.svg';
 import styles from './Navigation.module.css';
 import classNames from 'classnames';
 
