@@ -11,10 +11,12 @@ const Button = ({ isModified }) => {
   }
   return (
     <>
-      <button className={classNames(styles.profile__button)}>Редактировать</button>
-      <button className={classNames(styles.profile__button, styles.profile__button_out)}>Выйти из
+      <div className="">
+      <button className={classNames(styles.profile__button, 'opacity_btn')}>Редактировать</button>
+      <button className={classNames(styles.profile__button, styles.profile__button_out, 'opacity_btn')}>Выйти из
         аккаунта
       </button>
+      </div>
     </>
   );
 
@@ -23,7 +25,8 @@ const Profile = () => {
   return (
     <section className={styles.profile}>
       <h2 className={styles.profile__heading}>Привет, Виталий!</h2>
-      <form>
+      <form className={styles.profile__form}>
+        <div className="">
         <div className={styles.profile__textContainer}>
           <label htmlFor={'name'} className={styles.profile__label}>Имя</label>
           <input type="text" name={'name'} className={styles.profile__input}
@@ -33,6 +36,7 @@ const Profile = () => {
           <label htmlFor={'email'} className={styles.profile__label}>E-mail</label>
           <input type="email" name={'email'} className={styles.profile__input}
                  placeholder={'pochta@yandex.ru'} disabled/>
+        </div>
         </div>
         <Button isModified={false}/>
       </form>

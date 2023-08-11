@@ -15,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 14px 0 0;
+  margin: 10px 0 0;
 }
 
 .movieCard__title {
@@ -45,6 +45,7 @@
   line-height: normal;
   color: #A0A0A0;
 }
+
 .movieCard__length::before {
   display: block;
   content: '';
@@ -53,4 +54,19 @@
   height: 1px;
   background: #E8E8E8;
 
+}
+
+@media screen and (max-width: 900px) {
+  .movieCard {
+    max-width: 339px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movieCard__title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 }

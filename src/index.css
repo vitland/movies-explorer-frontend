@@ -1,6 +1,25 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
 
+.opacity {
+  transition: opacity .3s ease;
+}
+
+.opacity_link:hover{
+  opacity: .7;
+  cursor: pointer;
+}
+.opacity_btn:hover{
+  opacity: .8;
+  cursor: pointer;
+}
+
 body{
   font-family: Inter, Arial, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

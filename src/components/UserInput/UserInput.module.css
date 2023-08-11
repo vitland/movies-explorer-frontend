@@ -22,9 +22,10 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .userInput__err{
   padding: 0;
-  margin: 0 0 18px;
+  margin: 0 0 7px;
   color: #FF3055;
   font-size: 10px;
   font-style: normal;

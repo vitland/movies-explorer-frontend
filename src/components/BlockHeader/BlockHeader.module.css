@@ -1,5 +1,5 @@
 .header{
-  margin: 110px 0 0;
+  margin: 112px 0 0;
   padding: 0;
   font-size: 22px;
   letter-spacing: -.04em;
@@ -8,7 +8,7 @@
 }
 
 .header::after{
-  margin-top: 20px;
+  margin-top: 22px;
   content:'';
   width: 100%;
   max-width: 1140px;
@@ -16,4 +16,18 @@
   background-color: #000;
   box-sizing: border-box;
   display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .header{
+    margin: 72px 0 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+  .header::after {
+    margin-top: 28px;
+  }
 }

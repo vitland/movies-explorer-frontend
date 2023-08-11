@@ -52,3 +52,9 @@
   height: 32px;border-radius: 3px;
   background: #2BE080;
 }
+
+@media screen and (max-width: 768px){
+  .navigation{
+    display: none;
+  }
+}

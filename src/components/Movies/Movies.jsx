@@ -1,9 +1,10 @@
 import React from 'react';
-import SearchForm from '../SearchForm/SearchForm';
+import styles from './Movies.module.css';
+
 
 const Movies = ({children}) => {
   return (
-    <section>
+    <section className={styles.movies}>
       {children}
     </section>
   );

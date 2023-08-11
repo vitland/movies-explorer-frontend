@@ -1,21 +1,24 @@
-.promo{
+.promo {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #073042;
   box-sizing: border-box;
+
 }
 
 .promo__container {
   max-width: 1140px;
-  padding: 93px 0 75px;
+  padding: 72px 0 77px;
+  margin: 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 190px;
+  width: 100%;
 }
 
-.promo__textContainer{
+.promo__textContainer {
   display: flex;
   flex-direction: column;
 }
@@ -29,7 +32,8 @@
   line-height: 58px;
   color: #FFF;
 }
-.promo__subtitle{
+
+.promo__subtitle {
   max-width: 310px;
   margin: 0 0 146px;
   padding: 0;
@@ -37,10 +41,11 @@
   font-weight: 400;
   color: #FFFFFF;
 }
-.promo__infoBtn{
-  appearance: none;
+
+.promo__infoBtn {
   border: #FFF solid 1px;
   border-radius: 3px;
+  padding: 0;
   width: 129px;
   height: 36px;
   background-color: #073042;
@@ -48,4 +53,63 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
+}
+@media screen and (max-width: 1140px) {
+  .promo__container {
+    margin: 0 50px;}
+}
+
+@media screen and (max-width: 768px) {
+  .promo__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 131px 0 76px;
+    gap: 49px;
+  }
+
+  .promo__textContainer{
+    align-items: center;
+  }
+  .promo__heading {
+    text-align: center;
+    margin: 0 0 22px;
+    font-size: 40px;
+    line-height: 50px
+  }
+
+  .promo__subtitle {
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 260px;
+    margin: 0 0 92px;
+    opacity: .5;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .promo__container{
+    padding: 0;
+    margin: 60px 10px 0 10px;
+  }
+
+  .promo__heading {
+    font-size: 30px;
+    line-height: 38px; /* 126.667% */
+    letter-spacing: -1.2px;
+  }
+  .promo__subtitle {
+    margin: 0 0 80px;
+    opacity: .5;
+    max-width: 260px;
+  }
+  .promo__img{
+    max-width: 210px;
+    max-height: 206px;
+  }
+  .promo__infoBtn {
+    margin: 0 0 30px;
+  }
 }

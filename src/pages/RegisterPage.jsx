@@ -6,12 +6,12 @@ import Auth from '../components/Auth/Auth';
 
 const RegisterPage = () => {
   return (
-    <Auth link={'/signin'} text={'Уже зарегистрированы?'} linkText={'Войти'} heading={'Добро пожаловать!'}>
-      <UserForm>
-        <UserInput name={'Имя'} type={'text'} placeholder={'Виталий'}/>
-        <UserInput name={'E-mail'} type={'email'} placeholder={'pochta@yandex.ru'}/>
-        <UserInput name={'Пароль'} type={'password'}/>
-        <SubmitButton text={'Зарегистрироваться'}/>
+    <Auth link={'/signin'} text={'Уже зарегистрированы?'} linkText={'Войти'}
+          heading={'Добро пожаловать!'}>
+      <UserForm button={<SubmitButton text={'Зарегистрироваться'}/>}>
+          <UserInput name={'Имя'} type={'text'} placeholder={'Виталий'}/>
+          <UserInput name={'E-mail'} type={'email'} placeholder={'pochta@yandex.ru'}/>
+          <UserInput name={'Пароль'} type={'password'}/>
       </UserForm>
     </Auth>
   );

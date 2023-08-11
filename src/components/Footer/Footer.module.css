@@ -1,10 +1,11 @@
-.footer{
+.footer {
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-.footer__heading{
+
+.footer__heading {
   margin: 204px 0 0;
   padding: 0;
   font-size: 13px;
@@ -14,8 +15,9 @@
   color: #A0A0A0;
   text-align: center;
 }
-.footer__heading::after{
-  content:'';
+
+.footer__heading::after {
+  content: '';
   margin-top: 20px;
   width: 100%;
   max-width: 1140px;
@@ -24,13 +26,15 @@
   box-sizing: border-box;
   display: block;
 }
-.footer__container{
+
+.footer__container {
   width: 100%;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
-.footer__copy{
+
+.footer__copy {
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -39,12 +43,14 @@
   line-height: normal;
   color: #000;
 }
-.footer__linksContainer{
+
+.footer__linksContainer {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   gap: 20px;
 }
-.footer__link{
+
+.footer__link {
   margin: 20px 0;
   padding: 0;
   text-decoration: none;
@@ -53,4 +59,78 @@
   font-weight: 400;
   line-height: normal;
   color: #000;
+}
+
+@media screen and (max-width: 1140px) {
+  .footer {
+    max-width: 1100px;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    max-width: 668px;
+    padding: 0 50px;
+  }
+
+  .footer__heading {
+    margin: 168px 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    max-width: 708px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .footer__heading {
+    margin: 168px 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    padding: 0 10px;
+  }
+
+  .footer__container {
+    flex-direction: column-reverse;
+  }
+
+  .footer__linksContainer {
+    margin: 30px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer__link {
+    margin: 0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+  }
+
+  .footer__heading {
+    margin: 146px 0 0;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .footer__copy {
+    color: #A0A0A0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 20px;
+  }
 }

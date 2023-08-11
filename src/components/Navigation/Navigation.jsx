@@ -12,16 +12,16 @@ const Navigation = ({ dark, isLoggedIn }) => {
           <NavLink to={'/movies'}
                    className={(({ isActive }) => isActive
                      ? classNames(styles.navigation__link, styles.navigation__link_active,
-                       { [styles.navigation__link_dark]: dark })
+                       { [styles.navigation__link_dark]: dark }, 'opacity_link')
                      : classNames(styles.navigation__link,
-                       { [styles.navigation__link_dark]: dark },
+                       { [styles.navigation__link_dark]: dark }, 'opacity_link'
                      ))}>Фильмы</NavLink>
           <NavLink to={'/saved-movies'}
                    className={(({ isActive }) => isActive
                      ? classNames(styles.navigation__link, styles.navigation__link_active,
-                       { [styles.navigation__link_dark]: dark })
+                       { [styles.navigation__link_dark]: dark },'opacity_link')
                      : classNames(styles.navigation__link,
-                       { [styles.navigation__link_dark]: dark },
+                       { [styles.navigation__link_dark]: dark },'opacity_link'
                      ))}>Сохранённые
             фильмы</NavLink>
       </nav>
@@ -30,9 +30,9 @@ const Navigation = ({ dark, isLoggedIn }) => {
   return (
     <nav className={styles.navigation}>
       <Link to={'/signup'} className={classNames(styles.navigation__link,
-        styles.navigation__link_reg)}>Регистрация</Link>
+        styles.navigation__link_reg, 'opacity_btn')}>Регистрация</Link>
       <Link to={'/signin'} className={classNames(styles.navigation__link,
-        styles.navigation__link_login)}>Войти</Link>
+        styles.navigation__link_login, 'opacity_btn')}>Войти</Link>
     </nav>
   );
 

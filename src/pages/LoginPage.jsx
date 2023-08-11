@@ -7,10 +7,9 @@ import Auth from '../components/Auth/Auth';
 const LoginPage = () => {
   return (
     <Auth link={'/signup'} text={'Ещё не зарегистрированы?'} linkText={'Регистрация'} heading={'Рады видеть!'}>
-      <UserForm>
+      <UserForm button={<SubmitButton text={'Войти'}/>}>
         <UserInput name={'E-mail'} type={'email'} placeholder={'pochta@yandex.ru'}/>
         <UserInput name={'Пароль'} type={'password'}/>
-        <SubmitButton text={'Войти'}/>
       </UserForm>
     </Auth>
   );

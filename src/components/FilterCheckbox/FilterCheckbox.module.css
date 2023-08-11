@@ -5,10 +5,6 @@
   left: -9000px;
 }
 
-/*.FilterCheckbox__toggleButton:focus + .FilterCheckbox__toggleLabel::before {*/
-/*outline: 1px solid #073042;*/
-/*}*/
-
 .FilterCheckbox__toggleLabel {
   margin: 32px 0 117px;
   position: relative;
@@ -28,7 +24,7 @@
   height: 1rem;
   border-radius: 1rem;
   background: #EBEBEB;
-
+  cursor: pointer;
 }
 
 .FilterCheckbox__toggleLabel::after {
@@ -41,6 +37,7 @@
   border-radius: 1rem;
   background: #F5F5F5;
   transition: 200ms ease-in-out;
+  cursor: pointer;
 }
 
 .FilterCheckbox__toggleButton:checked + .FilterCheckbox__toggleLabel::after {
@@ -49,4 +46,32 @@
 
 .FilterCheckbox__toggleButton:checked + .FilterCheckbox__toggleLabel::before {
   background: #2BE080;
+}
+
+@media screen and (max-width: 768px) {
+  .FilterCheckbox__toggleLabel{
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    margin: 45px 0 131px;
+  }
+
+  .FilterCheckbox__toggleLabel::before {
+    margin: 0 0 0 14px
+  }
+  .FilterCheckbox__toggleLabel::after {
+    left: 8.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .FilterCheckbox__toggleLabel{
+    align-self: center;
+    flex-direction: row-reverse;
+    margin: 51px 0 91px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
 }

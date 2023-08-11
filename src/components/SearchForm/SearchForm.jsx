@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './SearchForm.module.css';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
+import classNames from 'classnames';
 
 const SearchForm = () => {
   return (
@@ -10,7 +11,7 @@ const SearchForm = () => {
           <label htmlFor="" className=""></label>
           <input type="text" name="search" className={styles.searchForm__searchField}
                  placeholder="Фильм"/>
-          <button className={styles.searchForm__searchButton} type="submit">Найти</button>
+          <button className={classNames(styles.searchForm__searchButton,'opacity_btn')} type="submit">Найти</button>
         </form>
         <FilterCheckbox/>
       </div>
