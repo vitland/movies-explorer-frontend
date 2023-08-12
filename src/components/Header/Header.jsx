@@ -20,7 +20,7 @@ const Header = ({ light, isLoggedIn }) => {
         {isLoggedIn ?
           <Link to={'/profile'} className={classNames(styles.header__user,
             { [styles.header__user_dark]: light }, 'opacity_link')}>
-            <img src={!light ? userIcon : userIcon_dark} alt=""/>
+            <img src={!light ? userIcon : userIcon_dark} alt="иконка пользователя"/>
             <span>Аккаунт</span>
           </Link> : null}
         <button className={classNames(styles.header__burger)}>{light?<Burger/>:<BurgerLight/>}</button>

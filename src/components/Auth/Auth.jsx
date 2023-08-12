@@ -10,7 +10,7 @@ const Auth = ({children, link, heading, text, linkText }) => {
       <div className={styles.auth__container}>
         <div className={styles.auth__headingContainer}>
           <Link to={'/'}>
-          <img src={Logo} alt="" className={styles.auth__logo}/>
+          <img src={Logo} alt="логотип" className={styles.auth__logo}/>
         </Link>
           <h2 className={styles.auth__heading}>{heading}</h2>
         </div>

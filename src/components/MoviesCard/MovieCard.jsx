@@ -7,7 +7,7 @@ import classNames from 'classnames';
 const MovieCard = ({savedMovies}) => {
   return (
     <article className={styles.movieCard}>
-      <img src={require('../../images/moviePic.png')} alt="" className=""/>
+      <img src={require('../../images/moviePic.png')} alt="кадр из фильма" className=""/>
       <div className={styles.movieCard__infoContainer}>
         <h3 className={styles.movieCard__title}>33 слова о дизайне</h3>
         <button className={classNames(styles.movieCard__like, 'opacity_btn')}>
