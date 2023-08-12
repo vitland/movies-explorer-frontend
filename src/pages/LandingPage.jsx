@@ -6,7 +6,6 @@ import Techs from '../components/Techs/Techs';
 import AboutMe from '../components/AboutMe/AboutMe';
 import Footer from '../components/Footer/Footer';
 import Main from '../components/Main/Main';
-import Sidebar from '../components/Sidebar/Sidebar';
 import Portfolio from '../components/Portfolio/Portfolio';
 
 
