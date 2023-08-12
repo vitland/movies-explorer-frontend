@@ -16,9 +16,9 @@ const MoviesCardList = ({savedMovies}) => {
     <section className={styles.list}>
       <div className={styles.list__container}>
         <MovieCard savedMovies={savedMovies}/>
+        <MovieCard isLiked={true}/>
         <MovieCard/>
-        <MovieCard/>
-        <MovieCard/>
+        <MovieCard isLiked={true}/>
         <MovieCard/>
       </div>
       <MoreBtn savedMovies={savedMovies}/>
