@@ -56,56 +56,14 @@
   color: #000000;
 }
 
-.aboutMe__portfolio {
-  margin: 0 0 50px;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #A0A0A0;
-}
+
 
 .aboutMe__img {
   object-fit: contain;
   max-height: 327px;
 }
 
-.aboutMe__list {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
 
-.aboutMe__listItem {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.aboutMe__listItem:not(:last-of-type)::after {
-  margin-bottom: 20px;
-  content: '';
-  width: 100%;
-  max-width: 1140px;
-  height: 1px;
-  background-color: #E8E8E8;
-  box-sizing: border-box;
-  display: block;
-}
-
-.aboutMe_link{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 50px;
-  letter-spacing: -.04em;
-  text-decoration: none;
-  color: #000000;
-}
 
 @media screen and (max-width: 1140px) {
   .aboutMe{
@@ -146,10 +104,7 @@
   .aboutMe__gitlink{
     margin: 0 0 92px;
   }
-  .aboutMe_link{
-    font-size: 28px;
-    letter-spacing: -1.12px;
-  }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -174,17 +129,8 @@
     margin: 0 0 40px;
     font-size: 16px;
   }
-  .aboutMe__gitlink{
-    margin: 0 0 70px;
-  }
-  .aboutMe__portfolio{
-    margin: 0 0 40px;
-  }
-  .aboutMe_link{
-    font-size: 22px;
-    line-height: 28px; /* 155.556% */
-    letter-spacing: -0.72px;
-  }
+
+
 }
 
 @media screen and (max-width: 400px) {
@@ -197,6 +143,7 @@
   .aboutMe__textContainer{
     align-items: flex-start;
   }
+
   .aboutMe__heading{
     font-size: 30px;
     font-style: normal;
@@ -219,17 +166,5 @@
     font-weight: 400;
     line-height: 16px; /* 145.455% */
   }
-  .aboutMe__portfolio{
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
-  }
-  .aboutMe_link{
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px; /* 155.556% */
-    letter-spacing: -0.72px;
-  }
+
 }

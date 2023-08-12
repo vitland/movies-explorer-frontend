@@ -7,6 +7,7 @@ import AboutMe from '../components/AboutMe/AboutMe';
 import Footer from '../components/Footer/Footer';
 import Main from '../components/Main/Main';
 import Sidebar from '../components/Sidebar/Sidebar';
+import Portfolio from '../components/Portfolio/Portfolio';
 
 
 const LandingPage = () => {
@@ -18,6 +19,7 @@ const LandingPage = () => {
         <AboutProject/>
         <Techs/>
         <AboutMe/>
+        <Portfolio/>
       </Main>
       <Footer/>
     </>
