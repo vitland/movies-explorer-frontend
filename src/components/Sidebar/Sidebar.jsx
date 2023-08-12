@@ -29,7 +29,7 @@ const Sidebar = () => {
         </nav>
         <Link to={'/profile'} className={classNames(styles.sidebar__link, styles.sidebar__link_profile)}>
           <span>Аккаунт</span>
-          <img src={userIcon_dark} alt="Иконка юзера"/>
+          <img src={userIcon_dark} alt="Иконка юзера" className={classNames("opacity_btn")}/>
         </Link>
       </aside>
     </div>

@@ -17,7 +17,7 @@ const AboutMe = () => {
             2015 года
             работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.</p>
-          <a href="https://github.com/vitland" className={classNames( styles.aboutMe__gitlink, 'opacity_link')}>Github</a>
+          <a href="https://github.com/vitland" target={"_blank"} className={classNames( styles.aboutMe__gitlink, 'opacity_link')}>Github</a>
         </div>
         <img src={require('../../images/profile.png')} alt="Мое фото" className={styles.aboutMe__img}/>
       </article>

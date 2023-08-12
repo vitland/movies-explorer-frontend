@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 const AboutProject = () => {
   return (
-    <section className={styles.about}>
+    <section id={"AboutProject"} className={styles.about}>
       <BlockHeader title={'О проекте'}/>
       <div className={styles.about__container}>
         <article>
