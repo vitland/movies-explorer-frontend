@@ -23,7 +23,7 @@ const Header = ({ light, isLoggedIn }) => {
             <img src={!light ? userIcon : userIcon_dark} alt="иконка пользователя"/>
             <span>Аккаунт</span>
           </Link> : null}
-        <button className={classNames(styles.header__burger)}>{light?<Burger/>:<BurgerLight/>}</button>
+        <button className={classNames(styles.header__burger, "opacity_btn")}>{light?<Burger/>:<BurgerLight/>}</button>
       </div>
     </header>
   );
