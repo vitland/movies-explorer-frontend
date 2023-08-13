@@ -23,7 +23,8 @@ const Button = ({ isModified }) => {
 };
 const Profile = () => {
   return (
-    <section className={styles.profile}>
+    <main className={styles.profile}>
+      <section className={styles.profile__container}>
       <h2 className={styles.profile__heading}>Привет, Виталий!</h2>
       <form className={styles.profile__form}>
         <div className="">
@@ -40,7 +41,8 @@ const Profile = () => {
         </div>
         <Button isModified={false}/>
       </form>
-    </section>
+      </section>
+    </main>
   );
 };
 

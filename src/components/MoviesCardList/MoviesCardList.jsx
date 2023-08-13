@@ -16,10 +16,10 @@ const MoviesCardList = ({savedMovies}) => {
     <section className={styles.list}>
       <div className={styles.list__container}>
         <MovieCard savedMovies={savedMovies}/>
-        <MovieCard isLiked={true}/>
-        <MovieCard/>
-        <MovieCard isLiked={true}/>
-        <MovieCard/>
+        <MovieCard savedMovies={savedMovies} isLiked={true}/>
+        <MovieCard savedMovies={savedMovies}/>
+        <MovieCard savedMovies={savedMovies} isLiked={true}/>
+        <MovieCard savedMovies={savedMovies}/>
       </div>
       <MoreBtn savedMovies={savedMovies}/>
     </section>

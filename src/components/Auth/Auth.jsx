@@ -6,8 +6,8 @@ import classNames from 'classnames';
 
 const Auth = ({children, link, heading, text, linkText }) => {
   return (
-    <section className={styles.auth}>
-      <div className={styles.auth__container}>
+    <main className={styles.auth}>
+      <section className={styles.auth__container}>
         <div className={styles.auth__headingContainer}>
           <Link to={'/'}>
           <img src={Logo} alt="логотип" className={styles.auth__logo}/>
@@ -17,8 +17,8 @@ const Auth = ({children, link, heading, text, linkText }) => {
         {children}
         <span className={styles.auth__text}>{text}<Link to={link} className={classNames(styles.auth__link, 'opacity_link')}>{linkText}</Link>
       </span>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 

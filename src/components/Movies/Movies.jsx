@@ -4,9 +4,9 @@ import styles from './Movies.module.css';
 
 const Movies = ({children}) => {
   return (
-    <section className={styles.movies}>
+    <main className={styles.movies}>
       {children}
-    </section>
+    </main>
   );
 };
 

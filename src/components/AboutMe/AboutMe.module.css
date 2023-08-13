@@ -166,5 +166,7 @@
     font-weight: 400;
     line-height: 16px; /* 145.455% */
   }
-
+  .aboutMe__gitlink{
+    margin: 0 0 67px;
+  }
 }

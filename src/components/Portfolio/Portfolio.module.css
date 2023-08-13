@@ -88,11 +88,12 @@
   .portfolio{
     padding: 0 14px;
   }
-  .portfolio__portfolio{
+  .portfolio__heading{
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 142.857% */
+    margin: 0 0 44px;
   }
   .portfolio_link{
     font-size: 18px;

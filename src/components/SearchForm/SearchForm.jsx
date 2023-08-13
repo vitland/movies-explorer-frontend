@@ -8,10 +8,11 @@ const SearchForm = () => {
     <>
       <div className={styles.searchForm}>
         <form action="" className={styles.searchForm__form}>
-          <label htmlFor="" className=""></label>
+          <label className={styles.searchForm__label}>
           <input type="text" name="search" className={styles.searchForm__searchField}
                  placeholder="Фильм"/>
           <button className={classNames(styles.searchForm__searchButton,'opacity_btn')} type="submit">Найти</button>
+          </label>
         </form>
         <FilterCheckbox/>
       </div>

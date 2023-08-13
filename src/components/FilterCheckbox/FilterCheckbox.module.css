@@ -52,7 +52,7 @@
   .FilterCheckbox__toggleLabel{
     align-self: flex-end;
     flex-direction: row-reverse;
-    margin: 45px 0 131px;
+    margin: 30px 0 131px;
   }
 
   .FilterCheckbox__toggleLabel::before {
