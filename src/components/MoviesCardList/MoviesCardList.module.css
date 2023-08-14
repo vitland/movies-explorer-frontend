@@ -48,4 +48,7 @@
   .list{
     margin-bottom: 17px;
   }
+  .list__button {
+    width: 240px;
+  }
 }

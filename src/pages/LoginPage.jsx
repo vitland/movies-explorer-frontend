@@ -9,7 +9,7 @@ const LoginPage = () => {
     <Auth link={'/signup'} text={'Ещё не зарегистрированы?'} linkText={'Регистрация'} heading={'Рады видеть!'}>
       <UserForm button={<SubmitButton text={'Войти'}/>}>
         <UserInput name={'E-mail'} type={'email'} placeholder={'pochta@yandex.ru'}/>
-        <UserInput name={'Пароль'} type={'password'}/>
+        <UserInput name={'Пароль'} type={'password'} placeholder={'password'}/>
       </UserForm>
     </Auth>
   );

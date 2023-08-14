@@ -1,8 +1,9 @@
 .userForm{
   display: flex;
+  flex: 1;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
 }
 
 .userForm__inputsContainer{
@@ -12,12 +13,8 @@
   margin: 39px 0 0;
 }
 
-@media screen and (max-width: 500px) {
-  .userForm{
-    align-items: center;
-    align-content: space-between;
-  }
+@media screen and (max-width: 450px) {
   .userForm__inputsContainer{
-    margin: 81px 0 0;
+    margin: 79px 0 0;
   }
 }

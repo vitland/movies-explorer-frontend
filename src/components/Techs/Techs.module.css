@@ -102,6 +102,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .tech {
+    padding: 0 18px;
+  }
   .tech__list {
     max-width: 300px;
   }
