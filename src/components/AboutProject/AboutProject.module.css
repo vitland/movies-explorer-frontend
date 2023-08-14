@@ -67,6 +67,10 @@
 
 
 @media screen and (max-width: 1140px) {
+  .about{
+    max-width: 1100px;
+    padding: 0 50px;
+  }
   .about__chart {
     grid-template-columns: 20% 80%;
   }
@@ -112,7 +116,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .about {
     padding: 0 18px;
   }

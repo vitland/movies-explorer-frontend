@@ -11,7 +11,7 @@ const RegisterPage = () => {
       <UserForm button={<SubmitButton text={'Зарегистрироваться'}/>}>
           <UserInput name={'Имя'} type={'text'} placeholder={'Виталий'}/>
           <UserInput name={'E-mail'} type={'email'} placeholder={'pochta@yandex.ru'}/>
-          <UserInput name={'Пароль'} type={'password'}/>
+          <UserInput name={'Пароль'} type={'password'} placeholder={'password'}/>
       </UserForm>
     </Auth>
   );
