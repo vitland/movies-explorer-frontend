@@ -2,11 +2,12 @@ import React from 'react';
 import styles from './FilterCheckbox.module.css';
 
 
-const FilterCheckbox = () => {
+const FilterCheckbox = ({isChecked, onChange}) => {
+
   return (
     <>
-      <input type="checkbox" className={styles.FilterCheckbox__toggleButton} id="toggle"/>
-      <label htmlFor="toggle" className={styles.FilterCheckbox__toggleLabel}>Короткометражки</label>
+      <input type="checkbox" checked={isChecked} className={styles.FilterCheckbox__toggleButton} id="toggle" onChange={onChange}/>
+      <label htmlFor="toggle" className={styles.FilterCheckbox__toggleLabel} >Короткометражки</label>
     </>
   );
 };
