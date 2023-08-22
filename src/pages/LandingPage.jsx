@@ -12,7 +12,7 @@ import Portfolio from '../components/Portfolio/Portfolio';
 const LandingPage = () => {
   return (
     <>
-      <Header isLoggedIn={true}/>
+      <Header isLoggedIn={false}/>
       <Main>
         <Promo/>
         <AboutProject/>

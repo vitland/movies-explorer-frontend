@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import styles from './Sidebar.module.css';
 import userIcon_dark from '../../images/user_icon_dark.svg';
 import { ReactComponent as CloseIcon } from '../../images/closeBtn.svg';
-import { useSidebar } from '../../utils/contexts/SidebarContext';
+import { useSidebar } from '../../contexts/SidebarContext';
 
 const Sidebar = () => {
   const { isOpened, setIsOpened } = useSidebar()

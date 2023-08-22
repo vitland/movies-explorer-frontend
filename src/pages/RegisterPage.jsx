@@ -1,18 +1,30 @@
-import React from 'react';
-import UserInput from '../components/UserInput/UserInput';
-import UserForm from '../components/UserForm/UserForm';
-import SubmitButton from '../components/SubmitButton/SubmitButton';
+import React, { useState } from 'react';
 import Auth from '../components/Auth/Auth';
+import { signIn, signUp } from '../utils/api/MainApi';
+import { useAuth } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router';
 
 const RegisterPage = () => {
+  const { user, setUser } = useAuth();
+  const [error, setError] = useState({});
+  const navigate = useNavigate();
+  const handleSubmit = (values) => {
+    setError({});
+    const { text: name, email, password } = values;
+    signUp({ name, email, password }).then((res) => {
+      setUser({ name, email, isLoggedIn: true });
+      return res;
+    }).then(() => {
+        signIn({ email, password });
+        localStorage.setItem('isLoggedIn', JSON.stringify(true));
+        navigate('/movies');
+      },
+    ).catch(e => setError({ msg: e.response }));
+  };
+
   return (
     <Auth link={'/signin'} text={'Уже зарегистрированы?'} linkText={'Войти'}
-          heading={'Добро пожаловать!'}>
-      <UserForm button={<SubmitButton text={'Зарегистрироваться'}/>}>
-          <UserInput name={'Имя'} type={'text'} placeholder={'Виталий'}/>
-          <UserInput name={'E-mail'} type={'email'} placeholder={'pochta@yandex.ru'}/>
-          <UserInput name={'Пароль'} type={'password'} placeholder={'password'}/>
-      </UserForm>
+          heading={'Добро пожаловать!'} name={true} handleSubmit={handleSubmit} error={error}>
     </Auth>
   );
 };

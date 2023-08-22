@@ -7,10 +7,12 @@ import userIcon from '../../images/user_icon.svg';
 import { ReactComponent as Burger } from '../../images/burger.svg';
 import { ReactComponent as BurgerLight } from '../../images/burger_light.svg';
 import Navigation from '../Navigation/Navigation';
-import { useSidebar } from '../../utils/contexts/SidebarContext';
+import { useSidebar } from '../../contexts/SidebarContext';
+import { useAuth } from '../../contexts/AuthContext';
 
-const Header = ({ light, isLoggedIn }) => {
+const Header = ({light}) => {
   const { isOpened, setIsOpened } = useSidebar();
+  const {user: { isLoggedIn }} = useAuth()
 
   return (
     <header className={classNames(styles.header, { [styles.header_light]: light })}>
