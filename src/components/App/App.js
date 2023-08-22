@@ -10,7 +10,7 @@ import SharedLayout from '../SharedLayout/SharedLayout';
 import ProtectedRoute from '../../HOC/ProtectedRoute';
 import { useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { validateToken } from '../../utils/api/MainApi';
+import { getUser, validateToken } from '../../utils/api/MainApi';
 
 function App () {
   const { setUser } = useAuth();
@@ -18,9 +18,23 @@ function App () {
   useEffect(() => {
     if (localStorage.getItem('isLoggedIn')) {
       validateToken().then(({ data: { name, email } }) => {
-          setUser({ name, email, isLoggedIn: true});
+          setUser({ name, email, isLoggedIn: true });
+          localStorage.setItem('isLoggedIn', JSON.stringify(true));
+
         },
       );
+    }
+  }, []);
+
+  useEffect(() => {
+    async function fetchUser () {
+      const user = await getUser();
+      setUser({ ...user, isLoggedIn: true });
+      localStorage.setItem('isLoggedIn', JSON.stringify(true));
+    }
+
+    if (!localStorage.getItem('isLoggedIn')) {
+      fetchUser();
     }
   }, []);
 

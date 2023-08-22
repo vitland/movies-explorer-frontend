@@ -54,9 +54,7 @@ const Auth = ({ link, heading, text, linkText, name, handleSubmit, error }) => {
                      maxLength={'40'}
                      errors={errors}/>
         </UserForm>
-        <span className={styles.auth__text}>{text}<Link to={link}
-                                                        className={classNames(styles.auth__link,
-                                                          'opacity_link')}>{linkText}</Link>
+        <span className={styles.auth__text}>{text}<Link to={link} className={classNames(styles.auth__link, 'opacity_link')}>{linkText}</Link>
       </span>
       </section>
     </main>
