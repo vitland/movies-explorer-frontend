@@ -5,16 +5,18 @@ import classNames from 'classnames';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import { getMovieCount, initialMovies, moviesToAdd } from '../../utils/movieCount';
 
-const MoviesCardList = ({ allMovies, error, savedMovies }) => {
-  const [currentMovieCount, setCurrentMovieCount] = useState(0);
+const MoviesCardList = ({ allMovies, error, savedMoviesPage, onLike, onRemove}) => {
+  const [currentMovieCount, setCurrentMovieCount] = useState(
+    JSON.parse(localStorage.getItem('currentMovieCount')));
   const width = useWindowWidth();
   const handleShowMoreMovies = (width) => {
-    getMovieCount(width)
-    setCurrentMovieCount(()=> currentMovieCount+moviesToAdd)
+    getMovieCount(width);
+    setCurrentMovieCount(() => currentMovieCount + moviesToAdd);
+    localStorage.setItem('currentMovieCount', JSON.stringify(currentMovieCount + moviesToAdd));
   };
 
-  const MoreBtn = ({ savedMovies }) => {
-    if (savedMovies || (currentMovieCount >= allMovies.length)) {
+  const MoreBtn = ({ savedMoviesPage }) => {
+    if (savedMoviesPage || (currentMovieCount >= allMovies.length)) {
       return null;
     }
     return (
@@ -22,21 +24,23 @@ const MoviesCardList = ({ allMovies, error, savedMovies }) => {
               onClick={() => handleShowMoreMovies(width)}>Ещё</button>
     );
   };
+
   useEffect(() => {
-    getMovieCount(width)
-    setCurrentMovieCount(()=> initialMovies)
+    getMovieCount(width);
+    if (!localStorage.getItem('currentMovieCount'))
+    setCurrentMovieCount(() => initialMovies);
   }, []);
 
   useEffect(() => {
-    getMovieCount(width)
+    getMovieCount(width);
   }, [width, allMovies]);
 
   return (
     <section className={styles.list}>
       <div className={styles.list__container}>
-        {allMovies.slice(0, currentMovieCount).map((movie) => (<MovieCard movie={movie} key={movie.id}/>))}
+        {allMovies.slice(0, currentMovieCount).map((movie) => (<MovieCard movie={movie} key={movie.id} onLike={onLike} onRemove={onRemove} savedMoviesPage={savedMoviesPage}/>))}
       </div>
-      {(!error && allMovies.length !== 0) && <MoreBtn savedMovies={savedMovies}/>}
+      {(!error && allMovies.length !== 0) && <MoreBtn savedMoviesPage={savedMoviesPage}/>}
     </section>
   );
 };

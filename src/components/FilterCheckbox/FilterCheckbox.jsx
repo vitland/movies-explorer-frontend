@@ -6,7 +6,7 @@ const FilterCheckbox = ({isChecked, onChange}) => {
 
   return (
     <>
-      <input type="checkbox" checked={isChecked} className={styles.FilterCheckbox__toggleButton} id="toggle" onChange={onChange}/>
+      <input type="checkbox" checked={isChecked||false} className={styles.FilterCheckbox__toggleButton} id="toggle" onChange={onChange}/>
       <label htmlFor="toggle" className={styles.FilterCheckbox__toggleLabel} >Короткометражки</label>
     </>
   );

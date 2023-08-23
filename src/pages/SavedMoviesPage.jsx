@@ -6,8 +6,8 @@ import Movies from '../components/Movies/Movies';
 const SavedMoviesPage = () => {
   return (
     <>
-      <Header light={true} isLoggedIn={false}/>
-      <Movies savedMovies={true}/>
+      <Header light={true} />
+      <Movies savedMoviesPage={true}/>
       <Footer/>
     </>
   );
