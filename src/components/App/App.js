@@ -37,7 +37,10 @@ function App () {
         setUser({ ...user, isLoggedIn: true });
         localStorage.setItem('isLoggedIn', JSON.stringify(true));
       })
-      .catch(e=> console.log(e));
+      .catch(() => {
+        setUser({})
+        localStorage.clear()
+      });
     }
   }, [setUser]);
 

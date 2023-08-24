@@ -13,7 +13,7 @@ const Movies = ({ savedMoviesPage }) => {
   const [savedMovieList, setSavedMovieList] = useState(null);
   const [renderList, setRenderList] = useState(null);
   const [isShort, setIsShort] = useState(null);
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState('');
   const [error, setError] = useState({
     status: false,
     msg: 'Ничего не найдено',
