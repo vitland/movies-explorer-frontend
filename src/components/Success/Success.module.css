@@ -1,24 +1,23 @@
-.error{
+.success{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   flex: 1;
-  margin: 5px 0 0;
+  padding: 0 30px;
 }
-
-.error__msg{
-  margin:0;
+.success__msg{
+  margin: 0;
   padding: 0;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  color: #FF004C;
+  text-align: center;
 }
-
-.error__msg_profile{
+.success__msg_profile{
   font-size: 11px;
   line-height: 13px;
+  color: #2BE080;
   text-align: center;
   margin-bottom: 20px;
 }

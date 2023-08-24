@@ -13,33 +13,30 @@ const Movies = ({ savedMoviesPage }) => {
   const [savedMovieList, setSavedMovieList] = useState(null);
   const [renderList, setRenderList] = useState(null);
   const [isShort, setIsShort] = useState(null);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(null);
   const [error, setError] = useState({
     status: false,
     msg: 'Ничего не найдено',
   });
   const [isLoading, setIsLoading] = useState(false);
-  /*алгоритм
-  * первый поиск фильмы записываются с локалстор
-  * лайк фильм записывается в базу
-  * обноаление страницы с фильмами - фильмы из локал сравниваются с список сохранения
-  *
-  * */
 
   useEffect(() => {
     if (!savedMoviesPage) {
       setMovieList(JSON.parse(localStorage.getItem('allMovies')));
-      setQuery(JSON.parse(localStorage.getItem('query')));
+      setQuery(JSON.parse(localStorage.getItem('query'))||'');
       setIsShort(JSON.parse(localStorage.getItem('isShort')));
-      getMovies().then((savedMovies) => {
+      getMovies()
+      .then((savedMovies) => {
         setSavedMovieList(savedMovies);
-      });
+      })
+      .catch(e => console.log(e))
       return
     }
-    getMovies().then((savedMovies) => {
+    getMovies()
+    .then((savedMovies) => {
       setSavedMovieList(savedMovies);
-    });
-
+    })
+    .catch(e => console.log(e))
   }, []);
 
   /*Рендер сохраненных фильмов*/
@@ -83,14 +80,15 @@ const Movies = ({ savedMoviesPage }) => {
   const handelSubmit = (query) => {
     setIsLoading(true);
     setError({ ...error, status: false });
-    getAllMovies().then((movies) => {
+    getAllMovies()
+    .then((movies) => {
       localStorage.setItem('allMovies', JSON.stringify(movies));
       localStorage.setItem('query', JSON.stringify(query));
       localStorage.removeItem('currentMovieCount');
       setMovieList(movies);
       setQuery(query);
       setIsLoading(false);
-    }).catch((e) => {
+    }).catch(() => {
       setError({
         msg: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз',
         status: true,

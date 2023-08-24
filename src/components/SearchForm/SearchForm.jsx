@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './SearchForm.module.css';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import classNames from 'classnames';
+import Error from '../Error/Error';
 
 const SearchForm = ({handleSubmit, handleChange, query, onShortChange, isChecked}) => {
   const [error, setError] = useState(false);
@@ -24,7 +25,7 @@ const SearchForm = ({handleSubmit, handleChange, query, onShortChange, isChecked
           <input type="text" name="search" className={styles.searchForm__searchField} placeholder="Фильм" onChange={handleChange} value={query??''}/>
           <button className={classNames(styles.searchForm__searchButton,'opacity_btn')} type="submit" >Найти</button>
           </label>
-          {error?<span>error</span>:null}
+          {error?<Error msg={"Введите запрос"}/>:null}
         </form>
         <FilterCheckbox onChange={onShortChange} isChecked={isChecked}/>
       </div>

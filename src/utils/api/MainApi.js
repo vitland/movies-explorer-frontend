@@ -17,7 +17,7 @@ const getResult = (res) => {
   };
 
   export const updateUser = ({ name, email }) => {
-    return fetch(`${URL}/users1/me`, {
+    return fetch(`${URL}/users/me`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -73,6 +73,7 @@ const getResult = (res) => {
 
   export const signOut = () => {
     return fetch(`${URL}/signout`, {
+      method: 'DELETE',
       credentials: 'include',
     }).then((res) => getResult(res));
   };

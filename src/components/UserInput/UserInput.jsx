@@ -3,7 +3,6 @@ import styles from './UserInput.module.css';
 import classNames from 'classnames';
 
 const UserInput = ({name, type, placeholder, onChange, value, maxLength, minLength, errors}) => {
-  console.log(errors[type]);
   return (
     <>
       <label htmlFor={name} className={styles.userInput__label}>{name}</label>

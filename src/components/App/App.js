@@ -17,26 +17,29 @@ function App () {
 
   useEffect(() => {
     if (localStorage.getItem('isLoggedIn')) {
-      validateToken().then(({ data: { name, email } }) => {
+      validateToken()
+      .then(({ data: { name, email } }) => {
           setUser({ name, email, isLoggedIn: true });
           localStorage.setItem('isLoggedIn', JSON.stringify(true));
-
         },
-      );
+      )
+      .catch(() => {
+        setUser({})
+        localStorage.clear()
+      });
     }
-  }, []);
+  }, [setUser]);
 
   useEffect(() => {
-    async function fetchUser () {
-      const user = await getUser();
-      setUser({ ...user, isLoggedIn: true });
-      localStorage.setItem('isLoggedIn', JSON.stringify(true));
-    }
-
     if (!localStorage.getItem('isLoggedIn')) {
-      fetchUser();
+      getUser()
+      .then(user => {
+        setUser({ ...user, isLoggedIn: true });
+        localStorage.setItem('isLoggedIn', JSON.stringify(true));
+      })
+      .catch(e=> console.log(e));
     }
-  }, []);
+  }, [setUser]);
 
   return (
     <BrowserRouter>

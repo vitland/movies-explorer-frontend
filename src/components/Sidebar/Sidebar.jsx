@@ -22,7 +22,7 @@ const Sidebar = () => {
               ? classNames(styles.sidebar__link, styles.sidebar__link_active,'opacity_link')
               : classNames(styles.sidebar__link,'opacity_link'
               ))}>Фильмы</NavLink></li>
-            <li><NavLink to={'saved-movies'} className={(({ isActive }) => isActive
+            <li><NavLink to={'/saved-movies'} className={(({ isActive }) => isActive
               ? classNames(styles.sidebar__link, styles.sidebar__link_active,'opacity_link')
               : classNames(styles.sidebar__link,'opacity_link'
               ))}>Сохранённые

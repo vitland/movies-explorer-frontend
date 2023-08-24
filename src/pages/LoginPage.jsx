@@ -5,14 +5,14 @@ import { signIn } from '../utils/api/MainApi';
 import { useNavigate } from 'react-router';
 
 const LoginPage = () => {
-  const { user, setUser } = useAuth();
+  const { setUser } = useAuth();
   const [error, setError] = useState({});
   const navigate = useNavigate()
   const handleSubmit = (values) => {
     setError({})
     const { email, password } = values;
     signIn({ email, password })
-    .then(({ name, email }) => {
+    .then(({ data:{name, email} } ) => {
       setUser({name, email, isLoggedIn: true});
       localStorage.setItem('isLoggedIn', JSON.stringify(true))
       navigate('/movies')
