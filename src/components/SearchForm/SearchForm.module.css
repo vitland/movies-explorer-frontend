@@ -15,14 +15,13 @@
   width: 100%;
 }
 
-.searchForm__label{
+.searchForm__label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
   padding: 0 0 14px;
 }
-
 
 .searchForm__searchField {
   margin: 0;
@@ -36,12 +35,12 @@
   border: none;
 }
 
-.searchForm__label:has(.searchForm__searchField:focus){
-  border-bottom: 1px solid #3456F3;
+.searchForm__label:has(.searchForm__searchField:focus) {
+  border-bottom: 1px solid #3456f3;
 }
 
 .searchForm__searchField::placeholder {
-  color: #A0A0A0;
+  color: #a0a0a0;
 }
 
 .searchForm__searchButton {
@@ -50,8 +49,8 @@
   margin: 0;
   padding: 0;
   border-radius: 48px;
-  background: #3456F3;
-  color: #FFF;
+  background: #3456f3;
+  color: #fff;
   font-size: 11px;
   font-style: normal;
   font-weight: 500;

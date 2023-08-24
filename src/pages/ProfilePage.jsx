@@ -5,8 +5,8 @@ import Profile from '../components/Profile/Profile';
 const ProfilePage = () => {
   return (
     <>
-      <Header  light={true}/>
-      <Profile/>
+      <Header light={true} />
+      <Profile />
     </>
   );
 };

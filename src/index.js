@@ -11,8 +11,8 @@ root.render(
   <React.StrictMode>
     <AuthProvider>
       <SidebarProvider>
-        <App/>
-      </ SidebarProvider>
+        <App />
+      </SidebarProvider>
     </AuthProvider>
   </React.StrictMode>,
 );

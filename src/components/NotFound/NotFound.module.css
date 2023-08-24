@@ -1,4 +1,4 @@
-.notFound{
+.notFound {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.notFound__heading{
+.notFound__heading {
   margin: 246px 0 5px;
   padding: 0;
   font-size: 140px;
@@ -16,7 +16,7 @@
   line-height: normal;
 }
 
-.notFound__subTitle{
+.notFound__subTitle {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -25,13 +25,14 @@
   line-height: normal;
 }
 
-.notFound__link{
+.notFound__btn {
   margin: 184px 0 60px;
   padding: 0;
-  text-decoration: none;
-  color: #3456F3;
+  color: #3456f3;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  border: none;
+  background: none;
 }

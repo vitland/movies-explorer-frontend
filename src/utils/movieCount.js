@@ -16,4 +16,4 @@ const getMovieCount = (width) => {
   }
 };
 
-export {initialMovies, moviesToAdd, getMovieCount}
+export { initialMovies, moviesToAdd, getMovieCount };

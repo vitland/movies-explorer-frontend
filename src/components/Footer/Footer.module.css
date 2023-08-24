@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: #A0A0A0;
+  color: #a0a0a0;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   width: 100%;
   max-width: 1140px;
   height: 1px;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   box-sizing: border-box;
   display: block;
 }
@@ -113,7 +113,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
   }
 
   .footer__heading {
@@ -126,7 +125,7 @@
   }
 
   .footer__copy {
-    color: #A0A0A0;
+    color: #a0a0a0;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

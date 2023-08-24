@@ -7,26 +7,40 @@ import { useNavigate } from 'react-router';
 const RegisterPage = () => {
   const { setUser } = useAuth();
   const [error, setError] = useState({});
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = (values) => {
     setError({});
     const { text: name, email, password } = values;
     signUp({ name, email, password })
-    .then(()=>{
-      return signIn({ email, password })
-    })
-    .then(({ data:{name, email} } ) => {
-      setUser({name, email, isLoggedIn: true});
-      localStorage.setItem('isLoggedIn', JSON.stringify(true))
-      navigate('/movies')
-    })
-    .catch(e => setError({ msg: e.response }));
+      .then(() => {
+        setLoading(true);
+        return signIn({ email, password });
+      })
+      .then(({ data: { name, email } }) => {
+        setUser({ name, email, isLoggedIn: true });
+        localStorage.setItem('user', JSON.stringify({ name, email, isLoggedIn: true }));
+        navigate('/movies');
+        setLoading(false);
+      })
+      .catch((e) => {
+        setError({ msg: e.response });
+        setLoading(false);
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
-    <Auth link={'/signin'} text={'Уже зарегистрированы?'} linkText={'Войти'}
-          heading={'Добро пожаловать!'} name={true} handleSubmit={handleSubmit} error={error}>
-    </Auth>
+    <Auth
+      link={'/signin'}
+      text={'Уже зарегистрированы?'}
+      linkText={'Войти'}
+      heading={'Добро пожаловать!'}
+      name={true}
+      handleSubmit={handleSubmit}
+      error={error}
+      loading={loading}
+    ></Auth>
   );
 };
 

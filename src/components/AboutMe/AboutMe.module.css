@@ -26,7 +26,7 @@
   padding: 0;
   font-size: 50px;
   font-weight: 400;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   line-height: 58px;
 }
 
@@ -56,42 +56,38 @@
   color: #000000;
 }
 
-
-
 .aboutMe__img {
   object-fit: contain;
   max-height: 327px;
 }
 
-
-
 @media screen and (max-width: 1140px) {
-  .aboutMe{
+  .aboutMe {
     max-width: 1100px;
     padding: 0 50px;
   }
-  .aboutMe__infoContainer{
+  .aboutMe__infoContainer {
     gap: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .aboutMe__heading{
+  .aboutMe__heading {
     font-size: 40px;
     line-height: 40px; /* 100% */
     letter-spacing: -1.6px;
   }
 
-  .aboutMe__subHeading{
+  .aboutMe__subHeading {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .aboutMe__textContainer{
+  .aboutMe__textContainer {
     max-width: 364px;
   }
 
-  .aboutMe__text{
+  .aboutMe__text {
     font-size: 12px;
     line-height: 18px;
     margin: 0 0 83px;
@@ -101,10 +97,9 @@
     max-height: 307px;
   }
 
-  .aboutMe__gitlink{
+  .aboutMe__gitlink {
     margin: 0 0 92px;
   }
-
 }
 
 @media screen and (max-width: 575px) {
@@ -118,33 +113,31 @@
     max-height: 352px;
     margin: 0 0 40px;
   }
-  .aboutMe__textContainer{
+  .aboutMe__textContainer {
     align-items: center;
     max-width: 500px;
   }
-  .aboutMe__subHeading{
+  .aboutMe__subHeading {
     font-size: 16px;
   }
-  .aboutMe__text{
+  .aboutMe__text {
     margin: 0 0 40px;
     font-size: 16px;
   }
-
-
 }
 
 @media screen and (max-width: 500px) {
-  .aboutMe{
+  .aboutMe {
     padding: 0 14px;
   }
-  .aboutMe__infoContainer{
+  .aboutMe__infoContainer {
     gap: 0;
   }
-  .aboutMe__textContainer{
+  .aboutMe__textContainer {
     align-items: flex-start;
   }
 
-  .aboutMe__heading{
+  .aboutMe__heading {
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -153,20 +146,20 @@
     margin: 0 0 20px;
   }
 
-  .aboutMe__subHeading{
+  .aboutMe__subHeading {
     font-size: 11px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px; /* 145.455% */
     margin: 0 0 20px;
   }
-  .aboutMe__text{
+  .aboutMe__text {
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 145.455% */
   }
-  .aboutMe__gitlink{
+  .aboutMe__gitlink {
     margin: 0 0 67px;
   }
 }

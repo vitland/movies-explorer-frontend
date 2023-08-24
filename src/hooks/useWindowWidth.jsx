@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const getWindowSize = () => {
   return window.innerWidth;
@@ -6,8 +6,10 @@ const getWindowSize = () => {
 const UseWindowWidth = () => {
   const [width, setWidth] = useState(getWindowSize());
   useEffect(() => {
-    function handleResize () {
-      setTimeout(function() {setWidth(()=>getWindowSize())}, 1000);
+    function handleResize() {
+      setTimeout(function () {
+        setWidth(() => getWindowSize());
+      }, 1000);
     }
 
     window.addEventListener('resize', handleResize);

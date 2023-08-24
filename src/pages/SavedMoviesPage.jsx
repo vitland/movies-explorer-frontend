@@ -7,8 +7,8 @@ const SavedMoviesPage = () => {
   return (
     <>
       <Header light={true} />
-      <Movies savedMoviesPage={true}/>
-      <Footer/>
+      <Movies savedMoviesPage={true} />
+      <Footer />
     </>
   );
 };

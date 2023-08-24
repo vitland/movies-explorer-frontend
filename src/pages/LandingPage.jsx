@@ -8,19 +8,18 @@ import Footer from '../components/Footer/Footer';
 import Main from '../components/Main/Main';
 import Portfolio from '../components/Portfolio/Portfolio';
 
-
 const LandingPage = () => {
   return (
     <>
-      <Header isLoggedIn={false}/>
+      <Header isLoggedIn={false} />
       <Main>
-        <Promo/>
-        <AboutProject/>
-        <Techs/>
-        <AboutMe/>
-        <Portfolio/>
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
       </Main>
-      <Footer/>
+      <Footer />
     </>
   );
 };

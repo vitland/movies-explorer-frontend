@@ -43,7 +43,7 @@
   left: 0;
   content: '';
   height: 1px;
-  background: #E8E8E8;
+  background: #e8e8e8;
   width: 100%;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .profile__button_out {
-  color: #FF3055;
+  color: #ff3055;
   margin: 16px 0 0;
 }
 

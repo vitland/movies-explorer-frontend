@@ -2,18 +2,18 @@
 @import url(./vendor/fonts/fonts.css);
 
 .opacity {
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.opacity_link:hover{
-  opacity: .7;
+.opacity_link:hover {
+  opacity: 0.7;
   cursor: pointer;
 }
-.opacity_btn:hover{
-  opacity: .8;
+.opacity_btn:hover {
+  opacity: 0.8;
   cursor: pointer;
 }
 
-body{
+body {
   font-family: Inter, Arial, sans-serif;
 }

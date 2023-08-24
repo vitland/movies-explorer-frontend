@@ -6,10 +6,11 @@ const Techs = () => {
   return (
     <section className={styles.tech}>
       <div className={styles.tech__container}>
-        <BlockHeader title={'Технологии'}/>
+        <BlockHeader title={'Технологии'} />
         <h2 className={styles.tech__heading}>7 технологий</h2>
-        <p className={styles.tech__text}>На курсе веб-разработки мы освоили технологии, которые
-          применили в дипломном проекте.</p>
+        <p className={styles.tech__text}>
+          На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.
+        </p>
         <ul className={styles.tech__list}>
           <li className={styles.tech__item}>HTML</li>
           <li className={styles.tech__item}>CSS</li>

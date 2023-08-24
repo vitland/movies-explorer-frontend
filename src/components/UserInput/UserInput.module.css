@@ -1,4 +1,4 @@
-.userInput{
+.userInput {
   padding: 5px 0 10px;
   margin: 0 0 6px;
   font-size: 14px;
@@ -8,31 +8,30 @@
   width: 100%;
   max-width: 396px;
   border: none;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
   outline: none;
 }
-.userInput:focus{
-  border-bottom: 1px solid #3456F3;
-
+.userInput:focus {
+  border-bottom: 1px solid #3456f3;
 }
-.userInput__label{
-  color: #A0A0A0;
+.userInput__label {
+  color: #a0a0a0;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.userInput__err{
+.userInput__err {
   visibility: hidden;
   padding: 0;
   margin: 0 0 7px;
-  color: #FF3055;
+  color: #ff3055;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.userInput__err_active{
+.userInput__err_active {
   visibility: visible;
 }

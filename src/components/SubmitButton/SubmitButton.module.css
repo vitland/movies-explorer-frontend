@@ -5,8 +5,8 @@
   height: 45px;
   border: none;
   border-radius: 3px;
-  background: #3456F3;
-  color: #FFF;
+  background: #3456f3;
+  color: #fff;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -15,8 +15,8 @@
 }
 
 .submitButton_inActive {
-  background: #F8F8F8;
-  color: #C2C2C2;
+  background: #f8f8f8;
+  color: #c2c2c2;
   cursor: default;
 }
 

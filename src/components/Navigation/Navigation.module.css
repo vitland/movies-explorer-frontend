@@ -1,4 +1,4 @@
-.navigation{
+.navigation {
   display: flex;
   gap: 20px;
   justify-content: space-between;
@@ -6,25 +6,25 @@
   margin: 0 0 0 70px;
 }
 
-.navigation__link{
+.navigation__link {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 
-.navigation__link_dark{
+.navigation__link_dark {
   color: #000;
 }
 
-.navigation__link_active{
+.navigation__link_active {
   font-weight: 500;
   position: relative;
 }
 
-.navigation__link_active::after{
+.navigation__link_active::after {
   display: block;
   position: absolute;
   top: 0;
@@ -35,12 +35,12 @@
   background: #000;
   width: 100%;
 }
-.navigation__link_reg{
+.navigation__link_reg {
   font-size: 12px;
   line-height: 16px;
 }
 
-.navigation__link_login{
+.navigation__link_login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,12 +49,13 @@
   line-height: 16px;
   font-weight: 500;
   width: 76px;
-  height: 32px;border-radius: 3px;
-  background: #2BE080;
+  height: 32px;
+  border-radius: 3px;
+  background: #2be080;
 }
 
-@media screen and (max-width: 768px){
-  .navigation{
+@media screen and (max-width: 768px) {
+  .navigation {
     display: none;
   }
 }
