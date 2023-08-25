@@ -1,5 +1,4 @@
-// const URL = 'https://api.moviefeed.nomoreparties.sbs';
-const URL = 'http://localhost:3001';
+const URL = 'https://api.moviefeed.nomoreparties.sbs';
 
 const getResult = (res) => {
   if (res.ok) {
