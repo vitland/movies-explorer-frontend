@@ -10,7 +10,7 @@ import { addMovie, getMovies, removeMovie } from '../../utils/api/MainApi';
 
 const Movies = ({ savedMoviesPage }) => {
   const [movieList, setMovieList] = useState(null);
-  const [savedMovieList, setSavedMovieList] = useState(null);
+  const [savedMovieList, setSavedMovieList] = useState(JSON.parse(localStorage.getItem('savedMovies')));
   const [renderList, setRenderList] = useState(null);
   const [isShort, setIsShort] = useState(false);
   const [query, setQuery] = useState('');
