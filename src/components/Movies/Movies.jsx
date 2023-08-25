@@ -47,7 +47,7 @@ const Movies = ({ savedMoviesPage }) => {
       setError({ ...error, status: false });
       const filteredMovies = movieFilter(savedMovieList, isShort, query);
       setRenderList(() => filteredMovies);
-      if (filteredMovies.length === 0) {
+      if (filteredMovies.length === 0 && savedMovieList.length !==0) {
         setError({
           ...error,
           status: true,
