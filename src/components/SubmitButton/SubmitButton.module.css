@@ -1,0 +1,30 @@
+.submitButton {
+  max-width: 410px;
+  margin: 0;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 3px;
+  background: #3456f3;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.submitButton_inActive {
+  background: #f8f8f8;
+  color: #c2c2c2;
+  cursor: default;
+}
+
+@media screen and (max-width: 500px) {
+  .submitButton {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

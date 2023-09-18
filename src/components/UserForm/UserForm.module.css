@@ -1,0 +1,20 @@
+.userForm {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.userForm__inputsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 39px 0 0;
+}
+
+@media screen and (max-width: 450px) {
+  .userForm__inputsContainer {
+    margin: 79px 0 0;
+  }
+}
